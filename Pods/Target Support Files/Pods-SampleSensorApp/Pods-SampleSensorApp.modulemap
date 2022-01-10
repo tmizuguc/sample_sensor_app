@@ -1,0 +1,6 @@
+framework module Pods_SampleSensorApp {
+  umbrella header "Pods-SampleSensorApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
