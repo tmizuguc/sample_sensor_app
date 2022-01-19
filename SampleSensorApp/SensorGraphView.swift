@@ -111,7 +111,7 @@ struct GyroGraphView: UIViewRepresentable {
     }
 }
 
-// ジャイロ
+// 重力
 struct GravityGraphView: UIViewRepresentable {
 
     var recordString: String
@@ -148,7 +148,7 @@ struct GravityGraphView: UIViewRepresentable {
     }
 }
 
-// ジャイロ
+// 姿勢
 struct AttitudeGraphView: UIViewRepresentable {
 
     var recordString: String

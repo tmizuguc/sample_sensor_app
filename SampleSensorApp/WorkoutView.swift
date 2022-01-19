@@ -16,12 +16,12 @@ import SwiftUI
 import CoreMotion
 
 struct WorkoutView: View {
-    var timefrequency: Double
-    @State var timesecond: Double
+    let workout_name: String
+    let timefrequency: Int
+    @State var timesecond: Int
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    
     @ObservedObject var sensor = MotionSensor()
     @ObservedObject var fileManager = SensorFileManager()
     
@@ -32,10 +32,10 @@ struct WorkoutView: View {
             // タイマー
             if self.sensor.isStarted {
                 if timesecond > 0 {
-                    TimerText(text: "\(Int(timesecond / 1000))")
+                    TimerText(text: "\(timesecond)")
                         .onReceive(timer) { time in
                             if self.timesecond > 0 {
-                                self.timesecond -= 1000
+                                self.timesecond -= 1
                                 if self.timesecond <= 0 {
                                     stopAction()
                                 }
@@ -45,36 +45,45 @@ struct WorkoutView: View {
                     TimerText(text: "終了")
                 }
             } else {
-                TimerText(text: "\(Int(timesecond / 1000))")
+                TimerText(text: "\(timesecond)")
             }
-            
             
             // 計測開始ボタン
             Button(action: {
-                self.sensor.isStarted ? stopAction() : startAction()
+                self.sensor.isStarted ? stopOnceAction() : startAction()
             }) {
-                self.sensor.isStarted ? Text("計測中断") : Text("計測開始")
-            }
+                self.sensor.isStarted ? Text("一時停止") : Text("計測開始")
+            }.disabled(self.timesecond <= 0)
             
             // ログ一覧
-            FileListView()
-
+            FileListView(file_prefix: self.workout_name)
         }
     }
     
     private func stopAction() {
         self.sensor.stop()
-        self.fileManager.saveFile(data: self.sensor.recordText, fileName: "sensor_record_\(Date().timeIntervalSince1970).csv")
-        self.fileManager.updateFileList()
+        self.fileManager.saveFile(data: self.sensor.recordText, fileName: "\(self.workout_name)_\(self.now_yyyymmdd()).csv")
+        self.fileManager.updateFileList(file_prefix: self.workout_name)
+    }
+    
+    private func stopOnceAction() {
+        self.sensor.stop()
     }
     
     private func startAction() {
-        self.sensor.start(updateInterval: timefrequency / 1000)
+        self.sensor.start(updateInterval: Double(timefrequency) / 1000)
+    }
+    
+    private func now_yyyymmdd() -> String {
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd_HH:mm:ss"
+        return df.string(from: date)
     }
 }
 
 struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutView(timefrequency: 1000, timesecond: 5000)
+        WorkoutView(workout_name: "walk", timefrequency: 1000, timesecond: 5)
     }
 }

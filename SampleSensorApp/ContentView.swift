@@ -7,25 +7,47 @@
 
 import SwiftUI
 
+struct Workout: Identifiable {
+    var id: Int
+    let name: String
+    let name_en: String
+    let image: Image
+}
+
 struct ContentView: View {
-    // PROPERTIES
-    @State var txt = ""
-    @State var on = false
+    @ObservedObject var fileManager = SensorFileManager()
     
-    init() {
-            //Use this if NavigationBarTitle is with Large Font
-            UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 32)!]
-    }
+    let workouts: [Workout] = [
+        .init(id: 0, name: "歩行", name_en: "walk", image: Image(systemName: "figure.walk")),
+        .init(id: 1, name: "静止", name_en: "stand", image: Image(systemName: "figure.stand"))
+    ]
     
     // BODY
     var body: some View {
         NavigationView {
             List {
-                NavigationLink {
-                    WorkoutSettingView()
-                } label: {
-                    Text("歩行")
+                // ワークアウト一覧
+                ForEach(workouts) { workout in
+                    NavigationLink {
+                        WorkoutSettingView(workout_name: workout.name_en)
+                    } label: {
+                        HStack {
+                            workout.image
+                            Text(workout.name)
+                        }
+                    }
                 }
+                
+                // 記録
+                NavigationLink {
+                    FileListView(file_prefix: "")
+                } label: {
+                    HStack {
+                        Image(systemName: "pencil")
+                        Text("記録")
+                    }
+                }.simultaneousGesture(TapGesture().onEnded{
+                    fileManager.updateFileList(file_prefix: "")})
             }
             .navigationBarTitle(Text("ワークアウトを選択"))
         }

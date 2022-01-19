@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct FileListView: View {
+    var file_prefix: String
     @ObservedObject var fileManager = SensorFileManager()
     
-    init() {
-        self.fileManager.updateFileList()
+    init(file_prefix: String) {
+        self.file_prefix = file_prefix
+        self.fileManager.updateFileList(file_prefix: self.file_prefix)
     }
     
     var body: some View {
@@ -24,7 +26,7 @@ struct FileListView: View {
                     HStack {
                         Button(action: {
                             self.fileManager.deleteFile(fileName: fileName)
-                            self.fileManager.updateFileList()
+                            self.fileManager.updateFileList(file_prefix: self.file_prefix)
                         }) {
                             Text("削除")
                         }.buttonStyle(BorderlessButtonStyle())
@@ -39,7 +41,7 @@ struct FileListView: View {
 
 struct FileList_Previews: PreviewProvider {
     static var previews: some View {
-        FileListView()
+        FileListView(file_prefix: "walk")
     }
 }
 

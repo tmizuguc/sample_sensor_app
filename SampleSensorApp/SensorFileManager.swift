@@ -12,14 +12,15 @@ class SensorFileManager: NSObject, ObservableObject {
     let fileExtension = "csv"
     @Published var fileList: [String] = []
 
-    
-    func updateFileList() {
+    func updateFileList(file_prefix: String = "") {
         do {
             let files = try FileManager.default.contentsOfDirectory(at: self.documentDirectoryUrl, includingPropertiesForKeys: nil)
             let csvFiles = files.filter{ $0.pathExtension == fileExtension }
-            var csvFileNames = csvFiles.map{ $0.deletingPathExtension().lastPathComponent }
-            csvFileNames.sort(by: >)
-            fileList = csvFileNames
+                
+            let csvFileNames = csvFiles.map{ $0.deletingPathExtension().lastPathComponent }
+            var targetFileNames = csvFileNames.filter{ $0.prefix(file_prefix.count) == file_prefix}
+            targetFileNames.sort(by: >)
+            fileList = targetFileNames
         } catch {
             print(error)
         }
