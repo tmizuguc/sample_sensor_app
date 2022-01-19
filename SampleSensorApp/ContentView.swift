@@ -16,6 +16,7 @@ struct Workout: Identifiable {
 
 struct ContentView: View {
     @ObservedObject var fileManager = SensorFileManager()
+    var view = FileListView(file_prefix: "")
     
     let workouts: [Workout] = [
         .init(id: 0, name: "歩行", name_en: "walk", image: Image(systemName: "figure.walk")),
@@ -40,14 +41,14 @@ struct ContentView: View {
                 
                 // 記録
                 NavigationLink {
-                    FileListView(file_prefix: "")
+                    view
                 } label: {
                     HStack {
                         Image(systemName: "pencil")
                         Text("記録")
                     }
                 }.simultaneousGesture(TapGesture().onEnded{
-                    fileManager.updateFileList(file_prefix: "")})
+                    view.fileManager.updateFileList(file_prefix: "")})
             }
             .navigationBarTitle(Text("ワークアウトを選択"))
         }
