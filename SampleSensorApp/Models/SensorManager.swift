@@ -11,6 +11,7 @@ import UIKit
 
 class SensorManager: NSObject, ObservableObject {
     let motionManager = CMMotionManager()
+    let motionActivityManager = CMMotionActivityManager()
 
     @Published var isStarted = false
 
@@ -82,7 +83,7 @@ class SensorManager: NSObject, ObservableObject {
         recordText += "\(attitudePitch),\(attitudeRoll),\(attitudeYaw)\n"
     }
 
-    func clearMotionData() {
+    func clear() {
         recordText = ""
     }
 }

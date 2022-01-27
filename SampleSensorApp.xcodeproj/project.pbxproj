@@ -10,6 +10,7 @@
 		1700F56627A16152006E528A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1700F56527A16152006E528A /* GoogleService-Info.plist */; };
 		1700F56927A1625F006E528A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1700F56827A1625F006E528A /* FirebaseAnalytics */; };
 		1700F56D27A2AC20006E528A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F56C27A2AC20006E528A /* Utils.swift */; };
+		1700F57327A2C2B2006E528A /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F57227A2C2B2006E528A /* ActivityManager.swift */; };
 		172A0100278C66E900B89529 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A00FF278C66E900B89529 /* SensorData.swift */; };
 		17980073278BDBB9002A0734 /* SampleSensorAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980072278BDBB9002A0734 /* SampleSensorAppApp.swift */; };
 		17980075278BDBB9002A0734 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980074278BDBB9002A0734 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		1700F56527A16152006E528A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1700F56C27A2AC20006E528A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1700F57227A2C2B2006E528A /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		172A00FF278C66E900B89529 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		1798006F278BDBB9002A0734 /* SampleSensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17980072278BDBB9002A0734 /* SampleSensorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSensorAppApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				172A00FF278C66E900B89529 /* SensorData.swift */,
 				17980086278C04E7002A0734 /* SensorManager.swift */,
 				1798008B278C22B1002A0734 /* SensorFileManager.swift */,
+				1700F57227A2C2B2006E528A /* ActivityManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				1798008C278C22B1002A0734 /* SensorFileManager.swift in Sources */,
 				172A0100278C66E900B89529 /* SensorData.swift in Sources */,
 				17980096278C4C87002A0734 /* SensorGraphView.swift in Sources */,
+				1700F57327A2C2B2006E528A /* ActivityManager.swift in Sources */,
 				17980073278BDBB9002A0734 /* SampleSensorAppApp.swift in Sources */,
 				17980087278C04E7002A0734 /* SensorManager.swift in Sources */,
 				1700F56D27A2AC20006E528A /* Utils.swift in Sources */,
@@ -398,6 +402,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleSensorApp/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "The data is used for health check";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +437,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleSensorApp/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "The data is used for health check";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

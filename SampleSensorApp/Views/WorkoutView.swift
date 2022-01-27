@@ -23,6 +23,7 @@ struct WorkoutView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     @ObservedObject var sensor = SensorManager()
+    @ObservedObject var activity = ActivityManager()
     @ObservedObject var fileManager = SensorFileManager()
 
     var body: some View {
@@ -56,26 +57,31 @@ struct WorkoutView: View {
             }.disabled(self.timesecond <= 0)
 
             // ログ一覧
-            FileListView(file_prefix: self.workout_name)
+            FileListView(file_prefix: "sensor_\(self.workout_name)")
         }
     }
 
     // センサー取得の停止・ファイルの書き出しと更新
     private func stopAction() {
         sensor.stop()
-        fileManager.saveFile(data: sensor.recordText, fileName: "\(workout_name)_\(now_yyyymmdd()).csv")
+        activity.stop()
+        fileManager.saveFile(data: sensor.recordText, fileName: "sensor_\(workout_name)_\(now_yyyymmdd()).csv")
+        fileManager.saveFile(data: activity.recordText, fileName: "act_\(workout_name)_\(now_yyyymmdd()).csv")
         fileManager.updateFileList(file_prefix: workout_name)
-        sensor.clearMotionData()
+        sensor.clear()
+        activity.clear()
     }
 
     // センサー取得の停止
     private func stopOnceAction() {
         sensor.stop()
+        activity.stop()
     }
 
     // センサー取得の開始
     private func startAction() {
         sensor.start(updateInterval: Double(timefrequency) / 1000)
+        activity.start()
     }
 }
 

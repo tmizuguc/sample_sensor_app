@@ -48,7 +48,7 @@ struct ContentView: View {
                         Text("記録")
                     }
                 }.simultaneousGesture(TapGesture().onEnded {
-                    view.fileManager.updateFileList(file_prefix: "")
+                    view.fileManager.updateFileList(file_prefix: "sensor_")
                 })
             }
             .navigationBarTitle(Text("ワークアウトを選択"))
