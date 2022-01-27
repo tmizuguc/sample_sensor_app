@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SensorGraphView: View {
     var recordString: String
-        
+
     var body: some View {
         VStack {
             Text("\(recordString)")
@@ -23,4 +23,3 @@ struct SensorGraphView_Previews: PreviewProvider {
         SensorGraphView(recordString: "text")
     }
 }
-

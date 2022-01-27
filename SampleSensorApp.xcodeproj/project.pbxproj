@@ -7,36 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1700F56627A16152006E528A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1700F56527A16152006E528A /* GoogleService-Info.plist */; };
+		1700F56927A1625F006E528A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1700F56827A1625F006E528A /* FirebaseAnalytics */; };
+		1700F56D27A2AC20006E528A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F56C27A2AC20006E528A /* Utils.swift */; };
 		172A0100278C66E900B89529 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A00FF278C66E900B89529 /* SensorData.swift */; };
 		17980073278BDBB9002A0734 /* SampleSensorAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980072278BDBB9002A0734 /* SampleSensorAppApp.swift */; };
 		17980075278BDBB9002A0734 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980074278BDBB9002A0734 /* ContentView.swift */; };
 		17980077278BDBBB002A0734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17980076278BDBBB002A0734 /* Assets.xcassets */; };
-		1798007A278BDBBB002A0734 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17980079278BDBBB002A0734 /* Preview Assets.xcassets */; };
 		17980083278BF283002A0734 /* WorkoutSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980082278BF283002A0734 /* WorkoutSettingView.swift */; };
 		17980085278C01EC002A0734 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980084278C01EC002A0734 /* WorkoutView.swift */; };
-		17980087278C04E7002A0734 /* MotionSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980086278C04E7002A0734 /* MotionSensor.swift */; };
+		17980087278C04E7002A0734 /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980086278C04E7002A0734 /* SensorManager.swift */; };
 		1798008C278C22B1002A0734 /* SensorFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798008B278C22B1002A0734 /* SensorFileManager.swift */; };
-		1798008E278C370F002A0734 /* SensorTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798008D278C370F002A0734 /* SensorTimer.swift */; };
-		17980090278C3A47002A0734 /* TimerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798008F278C3A47002A0734 /* TimerText.swift */; };
+		17980090278C3A47002A0734 /* TimerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798008F278C3A47002A0734 /* TimerTextView.swift */; };
 		17980092278C400B002A0734 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980091278C400B002A0734 /* FileListView.swift */; };
 		17980096278C4C87002A0734 /* SensorGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17980095278C4C87002A0734 /* SensorGraphView.swift */; };
 		2794BE52A5DDF5DE20625853 /* Pods_SampleSensorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90D075ADCA7420A836DCAE8 /* Pods_SampleSensorApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1700F56527A16152006E528A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1700F56C27A2AC20006E528A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		172A00FF278C66E900B89529 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		1798006F278BDBB9002A0734 /* SampleSensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17980072278BDBB9002A0734 /* SampleSensorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSensorAppApp.swift; sourceTree = "<group>"; };
 		17980074278BDBB9002A0734 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17980076278BDBBB002A0734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17980079278BDBBB002A0734 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		17980082278BF283002A0734 /* WorkoutSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSettingView.swift; sourceTree = "<group>"; };
 		17980084278C01EC002A0734 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
-		17980086278C04E7002A0734 /* MotionSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSensor.swift; sourceTree = "<group>"; };
+		17980086278C04E7002A0734 /* SensorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
 		1798008A278C1D4E002A0734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1798008B278C22B1002A0734 /* SensorFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorFileManager.swift; sourceTree = "<group>"; };
-		1798008D278C370F002A0734 /* SensorTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTimer.swift; sourceTree = "<group>"; };
-		1798008F278C3A47002A0734 /* TimerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerText.swift; sourceTree = "<group>"; };
+		1798008F278C3A47002A0734 /* TimerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextView.swift; sourceTree = "<group>"; };
 		17980091278C400B002A0734 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		17980095278C4C87002A0734 /* SensorGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorGraphView.swift; sourceTree = "<group>"; };
 		72E17838106CEDC1AF7C2BE3 /* Pods-SampleSensorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSensorApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleSensorApp/Pods-SampleSensorApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1700F56927A1625F006E528A /* FirebaseAnalytics in Frameworks */,
 				2794BE52A5DDF5DE20625853 /* Pods_SampleSensorApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +58,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1700F56A27A2A7A8006E528A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				172A00FF278C66E900B89529 /* SensorData.swift */,
+				17980086278C04E7002A0734 /* SensorManager.swift */,
+				1798008B278C22B1002A0734 /* SensorFileManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1700F56B27A2A7C7006E528A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17980082278BF283002A0734 /* WorkoutSettingView.swift */,
+				17980084278C01EC002A0734 /* WorkoutView.swift */,
+				17980095278C4C87002A0734 /* SensorGraphView.swift */,
+				17980091278C400B002A0734 /* FileListView.swift */,
+				1798008F278C3A47002A0734 /* TimerTextView.swift */,
+				17980074278BDBB9002A0734 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		17980066278BDBB9002A0734 = {
 			isa = PBXGroup;
 			children = (
@@ -77,30 +102,15 @@
 		17980071278BDBB9002A0734 /* SampleSensorApp */ = {
 			isa = PBXGroup;
 			children = (
-				17980095278C4C87002A0734 /* SensorGraphView.swift */,
-				17980091278C400B002A0734 /* FileListView.swift */,
-				1798008F278C3A47002A0734 /* TimerText.swift */,
-				1798008B278C22B1002A0734 /* SensorFileManager.swift */,
+				1700F56B27A2A7C7006E528A /* Views */,
+				1700F56A27A2A7A8006E528A /* Models */,
+				1700F56527A16152006E528A /* GoogleService-Info.plist */,
 				1798008A278C1D4E002A0734 /* Info.plist */,
-				17980086278C04E7002A0734 /* MotionSensor.swift */,
-				17980084278C01EC002A0734 /* WorkoutView.swift */,
-				17980082278BF283002A0734 /* WorkoutSettingView.swift */,
 				17980072278BDBB9002A0734 /* SampleSensorAppApp.swift */,
-				17980074278BDBB9002A0734 /* ContentView.swift */,
 				17980076278BDBBB002A0734 /* Assets.xcassets */,
-				17980078278BDBBB002A0734 /* Preview Content */,
-				1798008D278C370F002A0734 /* SensorTimer.swift */,
-				172A00FF278C66E900B89529 /* SensorData.swift */,
+				1700F56C27A2AC20006E528A /* Utils.swift */,
 			);
 			path = SampleSensorApp;
-			sourceTree = "<group>";
-		};
-		17980078278BDBBB002A0734 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				17980079278BDBBB002A0734 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9BE1A5702DEB84F4D0269139 /* Frameworks */ = {
@@ -138,6 +148,9 @@
 			dependencies = (
 			);
 			name = SampleSensorApp;
+			packageProductDependencies = (
+				1700F56827A1625F006E528A /* FirebaseAnalytics */,
+			);
 			productName = SampleSensorApp;
 			productReference = 1798006F278BDBB9002A0734 /* SampleSensorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 17980066278BDBB9002A0734;
+			packageReferences = (
+				1700F56727A1625F006E528A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 17980070278BDBB9002A0734 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,8 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798007A278BDBBB002A0734 /* Preview Assets.xcassets in Resources */,
 				17980077278BDBBB002A0734 /* Assets.xcassets in Resources */,
+				1700F56627A16152006E528A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +206,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1A8C864F4F55CA911A610133 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -212,7 +228,7 @@
 		};
 		AB7EDDB028D563F44A79DB22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -234,9 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17980090278C3A47002A0734 /* TimerText.swift in Sources */,
+				17980090278C3A47002A0734 /* TimerTextView.swift in Sources */,
 				17980083278BF283002A0734 /* WorkoutSettingView.swift in Sources */,
-				1798008E278C370F002A0734 /* SensorTimer.swift in Sources */,
 				17980075278BDBB9002A0734 /* ContentView.swift in Sources */,
 				17980085278C01EC002A0734 /* WorkoutView.swift in Sources */,
 				17980092278C400B002A0734 /* FileListView.swift in Sources */,
@@ -244,7 +259,8 @@
 				172A0100278C66E900B89529 /* SensorData.swift in Sources */,
 				17980096278C4C87002A0734 /* SensorGraphView.swift in Sources */,
 				17980073278BDBB9002A0734 /* SampleSensorAppApp.swift in Sources */,
-				17980087278C04E7002A0734 /* MotionSensor.swift in Sources */,
+				17980087278C04E7002A0734 /* SensorManager.swift in Sources */,
+				1700F56D27A2AC20006E528A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +389,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleSensorApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 23V6V2PF9D;
@@ -390,9 +407,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guccini.sample-sensor-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Keio Reha Add Hoc";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,7 +423,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleSensorApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 23V6V2PF9D;
@@ -422,9 +441,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guccini.sample-sensor-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Keio Reha Add Hoc";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,6 +473,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1700F56727A1625F006E528A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1700F56827A1625F006E528A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1700F56727A1625F006E528A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17980067278BDBB9002A0734 /* Project object */;
 }

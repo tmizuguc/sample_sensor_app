@@ -17,12 +17,12 @@ struct Workout: Identifiable {
 struct ContentView: View {
     @ObservedObject var fileManager = SensorFileManager()
     var view = FileListView(file_prefix: "")
-    
+
     let workouts: [Workout] = [
         .init(id: 0, name: "歩行", name_en: "walk", image: Image(systemName: "figure.walk")),
-        .init(id: 1, name: "静止", name_en: "stand", image: Image(systemName: "figure.stand"))
+        .init(id: 1, name: "静止", name_en: "stand", image: Image(systemName: "figure.stand")),
     ]
-    
+
     // BODY
     var body: some View {
         NavigationView {
@@ -38,7 +38,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                
+
                 // 記録
                 NavigationLink {
                     view
@@ -47,8 +47,9 @@ struct ContentView: View {
                         Image(systemName: "pencil")
                         Text("記録")
                     }
-                }.simultaneousGesture(TapGesture().onEnded{
-                    view.fileManager.updateFileList(file_prefix: "")})
+                }.simultaneousGesture(TapGesture().onEnded {
+                    view.fileManager.updateFileList(file_prefix: "")
+                })
             }
             .navigationBarTitle(Text("ワークアウトを選択"))
         }

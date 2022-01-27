@@ -10,12 +10,12 @@ import SwiftUI
 struct FileListView: View {
     var file_prefix: String
     @ObservedObject var fileManager = SensorFileManager()
-    
+
     init(file_prefix: String) {
         self.file_prefix = file_prefix
-        self.fileManager.updateFileList(file_prefix: self.file_prefix)
+        fileManager.updateFileList(file_prefix: self.file_prefix)
     }
-    
+
     var body: some View {
         List {
             ForEach(self.fileManager.fileList, id: \.self) { fileName in
@@ -30,7 +30,7 @@ struct FileListView: View {
                         }) {
                             Text("削除")
                         }.buttonStyle(BorderlessButtonStyle())
-                        
+
                         Text("\(fileName)")
                     }
                 }
@@ -44,4 +44,3 @@ struct FileList_Previews: PreviewProvider {
         FileListView(file_prefix: "walk")
     }
 }
-

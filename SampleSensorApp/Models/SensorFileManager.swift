@@ -8,24 +8,24 @@
 import CoreMotion
 
 class SensorFileManager: NSObject, ObservableObject {
-    let documentDirectoryUrl = FileManager.default.urls( for: .documentDirectory, in: .userDomainMask ).first!
+    let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     let fileExtension = "csv"
     @Published var fileList: [String] = []
 
     func updateFileList(file_prefix: String = "") {
         do {
-            let files = try FileManager.default.contentsOfDirectory(at: self.documentDirectoryUrl, includingPropertiesForKeys: nil)
-            let csvFiles = files.filter{ $0.pathExtension == fileExtension }
-                
-            let csvFileNames = csvFiles.map{ $0.deletingPathExtension().lastPathComponent }
-            var targetFileNames = csvFileNames.filter{ $0.prefix(file_prefix.count) == file_prefix}
+            let files = try FileManager.default.contentsOfDirectory(at: documentDirectoryUrl, includingPropertiesForKeys: nil)
+            let csvFiles = files.filter { $0.pathExtension == fileExtension }
+
+            let csvFileNames = csvFiles.map { $0.deletingPathExtension().lastPathComponent }
+            var targetFileNames = csvFileNames.filter { $0.prefix(file_prefix.count) == file_prefix }
             targetFileNames.sort(by: >)
             fileList = targetFileNames
         } catch {
             print(error)
         }
     }
-    
+
     func deleteFile(fileName: String) {
         do {
             let filePath = documentDirectoryUrl.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
@@ -36,12 +36,12 @@ class SensorFileManager: NSObject, ObservableObject {
             print(error)
         }
     }
-    
+
     func saveFile(data: String, fileName: String) {
-        let fileUrl = self.documentDirectoryUrl.appendingPathComponent(fileName)
+        let fileUrl = documentDirectoryUrl.appendingPathComponent(fileName)
         try! data.data(using: .utf8)!.write(to: fileUrl, options: .atomic)
     }
-    
+
     func readFile(fileName: String) -> String {
         do {
             let filePath = documentDirectoryUrl.appendingPathComponent(fileName).appendingPathExtension(fileExtension)

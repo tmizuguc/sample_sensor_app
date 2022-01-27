@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>704625440077-b36blg434c1v82sght1k489m9djljbjh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.704625440077-b36blg434c1v82sght1k489m9djljbjh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA-SfUGrpjl4BmcFwZ0DJFgcKmnJsXOu2E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>704625440077</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.guccini.sample-sensor-app</string>
+	<key>PROJECT_ID</key>
+	<string>motionsensor-8ad15</string>
+	<key>STORAGE_BUCKET</key>
+	<string>motionsensor-8ad15.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:704625440077:ios:82548e6bc656b4b3747304</string>
+</dict>
+</plist>

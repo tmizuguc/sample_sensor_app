@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct TimerText: View {
+struct TimerTextView: View {
     var text: String
-    
+
     var body: some View {
         Text("\(text)")
             .font(.title)
